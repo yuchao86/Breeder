@@ -1,6 +1,8 @@
+一个简单实用的，可访问zookeeper的C++标准API接口及各种访问操作工具
+
 zookeeper's c++ api and access tool:zk_create, zk_get, zk_update, zk_list, zk_delete, zk_get_acl, zk_set_acl
 
-===============================================================
+//===============================================================
 zk_create:  create zookeeper node.
 ./zk_create  -H host:port -n node [-d data] [-f data file] [-o output file] [-a usr:passwd] [-l privilege]
 -H: zookeeper's host:port
@@ -104,7 +106,7 @@ zk_set_acl:  set zookeeper node's ACL.
     digest:user:passwd:acrwd : digest auth for [user] with [passwd],
           admin(a), create(c), read(r), write(w), delete(d)
     ip:ip_addr[/bits]:acrwd : ip auth for ip or ip subnet
--m: set Acl mode. [append]��[set]��[remove] can be set��default is append.
+-m: set Acl mode. [append]°¢[set]°¢[remove] can be set°£default is append.
 -o: output file, default is stdout
 -r: recursive to set child acl.
 -v: node's version
@@ -113,15 +115,27 @@ zk_set_acl:  set zookeeper node's ACL.
 ===============================================================
 zk_lock:  Test for lock zookeeper node.
 ./zk_lock  -H host:port -n node [-d data] [-f data file] [-o output file] [-a usr:passwd] [-l privilege]
+
 -H: zookeeper's host:port
+
 -n: node name for lock.
+
 -p: prex for lock. default is [lock].
+
 -a: auth user's user:passwd. it can be multi.
+
 -l: node's acl. it can be multi. it's value can be:
+
     all               :  any privilege for any user;
+
     self              : any privilege for creator; 
+
     read              : read for any user;
+
     user:passwd:acrwd : digest auth for [user] with [passwd], 
+
           admin(a), create(c), read(r), write(w), delete(d)
+
 -m: watch master node
+
 -h: help
