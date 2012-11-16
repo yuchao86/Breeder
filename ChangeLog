@@ -1,0 +1,7 @@
+*********************************************************************
+2011-11-14    cwinux@gmail.com   v1.1
+zk_set_acl: support ip auth, support auth and privilege's add, remove, modify
+*********************************************************************
+2012-06-27  cwinux@gmail.com   v1.2.1
+configure.ini  modify the bug for using zk_dir in openssl_dir
+*********************************************************************
